@@ -19,6 +19,7 @@ export function createFruitLi(fruit) {
     pSize.textContent = fruit.size;
 
     const image = document.createElement('img');
+    image.classList.add('image');
 
     image.src = fruit.image;
 
@@ -33,7 +34,7 @@ export function createFruitLi(fruit) {
 
     const pPrice = document.createElement('p');
 
-    pPrice.textContent = fruit.price.toLocalString('en-US', {
+    pPrice.textContent = fruit.price.toLocaleString('en-US', {
         style: 'currency',
         currency: 'USD',
     });
@@ -47,4 +48,6 @@ export function createFruitLi(fruit) {
     return li;
 
 }
-
+export function hello() {
+    return console.log('hello');
+}
