@@ -80,7 +80,7 @@ export function createTableRow(someCartItem, someFruit) {
     return tr;
 }
 
-export function createTableRow(cartArray, fruitArray) {
+export function booger(cartArray, fruitArray) {
     let sum = 0;
 
     for (let cartItem of cartArray) {
@@ -107,5 +107,5 @@ export function createTableRow(cartArray, fruitArray) {
 
 
 
-return console.log('hello');
+// return console.log('hello');
 

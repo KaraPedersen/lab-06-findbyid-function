@@ -6,7 +6,7 @@ import { fruit } from '../productsData.js';
 import { createFruitLi } from '../utils.js';
 // import { createFruitLi } from '../utils.js';
 
-// const ul = document.querySelector('.fruit-list');
+const ul = document.querySelector('.fruit-list');
 
 for (let name of fruit) {
     const li = createFruitLi(name);
