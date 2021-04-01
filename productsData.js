@@ -1,5 +1,6 @@
 export const fruit = [
     {
+        id: 1,
         name: 'kiwi',
         type: 'fruit',
         color: 'green',
@@ -10,6 +11,7 @@ export const fruit = [
         price: 5
     },
     {
+        id: 2,
         name: 'Banana',
         type: 'fruit',
         color: 'blue',
@@ -20,6 +22,7 @@ export const fruit = [
         price: 1
     },
     {
+        id: 3,
         name: 'pineapple',
         type: 'fruit',
         color: 'yellow',
@@ -30,6 +33,7 @@ export const fruit = [
         price: 2
     },
     {
+        id: 4,
         name: 'star fruit',
         type: 'fruit',
         color: 'purple',
@@ -40,6 +44,7 @@ export const fruit = [
         price: 4
     },
     {
+        id: 5,
         name: 'dragon fruit',
         type: 'fruit',
         color: 'pink',

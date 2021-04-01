@@ -1,3 +1,11 @@
+// export function findById(someArray, someId) {
+//     for (let item of someArray) {
+//         if (item.id === someId) {
+//             return item;
+//         }
+//     }
+// }
+
 export function createFruitLi(fruit) {
     const li = document.createElement('li');
 
@@ -48,6 +56,56 @@ export function createFruitLi(fruit) {
     return li;
 
 }
-export function hello() {
-    return console.log('hello');
+export function createTableRow(someCartItem, someFruit) {
+    const tr = document.createElement('tr');
+    const tdName = document.createElement('td');
+    const tdQuantity = document.createElement('td');
+    const tdPrice = document.createElement('td');
+
+    tdName.textContent = someFruit.name;
+    tdQuantity.textContent = someCartItem.quantity;
+    const total = someFruit.price * someCartItem.quantity;
+
+    const config = {
+        currency: 'USD',
+        style: 'currency',
+    };
+
+    const totalAsUSD = total.toLocaleString('en-US', config);
+
+    tdPrice.textContent = totalAsUSD;
+
+    tr.append(tdName, tdQuantity, tdPrice);
+
+    return tr;
 }
+
+export function createTableRow(cartArray, fruitArray) {
+    let sum = 0;
+
+    for (let cartItem of cartArray) {
+
+        const matchingFruit = findById(fruitArray, cartItem.id);
+
+        const lineItem = matchingFruit.price * cartItem.quantity;
+
+        sum = sum + lineItem;
+    }
+
+    const tr = document.createElement('tr');
+
+    const td1 = document.createElement('td');
+    const td2 = document.createElement('td');
+    const td3 = document.createElement('td');
+
+    td3.textContent = `$${sum}.00`;
+
+    tr.append(td1, td2, td3);
+
+    return tr;
+};
+
+
+
+return console.log('hello');
+
