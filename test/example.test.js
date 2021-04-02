@@ -1,6 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { findById } from '../utils.js';
+import { findById, calcItemTotal } from '../utils.js';
+
 const test = QUnit.test;
 
 test('time to test a function', (expect) => {
@@ -54,7 +55,7 @@ test('time to test a function', (expect) => {
             price: 2
         },
 
-    ]
+    ];
 
     //Act 
     // Call the function you're testing and set the result to a const
@@ -66,4 +67,18 @@ test('time to test a function', (expect) => {
     expect.deepEqual(actual, expected);
 
 });
+
+test('CalcItemTest', (expect) => {
+
+    const price = 5;
+    const quantity = 3;
+    //     
+    const expected = 15;
+    const actual = calcItemTotal(price, quantity);
+
+    expect.deepEqual(actual, expected);
+
+});
+
+
 

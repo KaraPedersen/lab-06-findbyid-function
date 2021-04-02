@@ -10,6 +10,17 @@ export function calcItemTotal(price, quantity) {
     return price * quantity;
 }
 
+export function calcOrderTotal(shoppingCart) {
+    let counter = 0;
+
+    for (let fruit of shoppingCart) {
+        const ItemPrice = findById(fruit, fruit.id).price;
+        const fruitTotal = calcItemTotal(ItemPrice, fruit.quantity);
+        counter += fruitTotal;
+    }
+    return counter;
+}
+
 
 export function createFruitLi(fruit) {
     const li = document.createElement('li');
@@ -108,7 +119,7 @@ export function booger(cartArray, fruitArray) {
     tr.append(td1, td2, td3);
 
     return tr;
-};
+}
 
 
 
