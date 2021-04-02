@@ -3,7 +3,7 @@ import { cart } from './shoppingCartData.js';
 import { createTableRow, booger, findById } from '../utils.js';
 import { getCart } from '../getCart.js';
 
-const button = document.getElementById('submit');
+const submitButton = document.getElementById('submit');
 //write get cart
 const totalCart = getCart();
 console.log(totalCart);
@@ -24,12 +24,15 @@ const totalRow = booger(totalCart, fruitData);
 
 table.append(totalRow);
 
-button.addEventListener('click', () => {
-    const cart = getCart();
-    console.log(cart);
+submitButton.addEventListener('click', () => {
+    const stringyCart = JSON.stringify(cart, true, 2);
+    alert(stringyCart);
+    localStorage.clear;
+    // const cart = getCart();
+    // console.log(cart);
 
 
-    alert(JSON.stringify(cart, null));
+    // alert(JSON.stringify(cart, null));
 
     localStorage.clear();
 

@@ -1,5 +1,5 @@
 import { fruitData } from './productsData.js';
-import { addItemToCart } from './adddItemToCart.js';
+import { addItemToCart, setCart } from './adddItemToCart.js';
 
 export function findById(someArray, someId) {
     for (let item of someArray) {
@@ -88,7 +88,8 @@ export function createTableRow(someCartItem, someFruit) {
     const tdName = document.createElement('td');
     const tdQuantity = document.createElement('td');
     const tdPrice = document.createElement('td');
-
+    //create submit button
+    //add adventListener to submit button
     tdName.textContent = someFruit.name;
     tdQuantity.textContent = someCartItem.quantity;
     const total = someFruit.price * someCartItem.quantity;
