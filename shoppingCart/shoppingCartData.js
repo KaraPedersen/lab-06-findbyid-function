@@ -17,3 +17,4 @@ export const cart = [
     },
 
 ];
+//this should be merging
